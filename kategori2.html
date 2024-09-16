@@ -1,70 +1,768 @@
 <!DOCTYPE html>
 <html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <main>
-      <h1>Tech & Story Lab</h1>
-      <section class="info">
-        <div>
-          <h3>Åbningstider</h3>
-          <p>Mandag-torsdag 9-16</p>
-          <p>Fredag 9-15</p>
-        </div>
-        <div>
-          <h3>Husk Studiekort</h3>
-          <p>
-            Studiekortet skal være gyldigt og må kun benyttes af kortets ejer
-          </p>
-        </div>
-      </section>
 
-      <h2>kategorier</h2>
-      <ul>
-        <li>
-          <a href="listeview.html?category=Mobile%20Devices">Ledninger</a>
-        </li>
-        <li>
-          <a href="listeview.html?category=Audio/Photo/Video%20Equipment"
-            >Telefoner</a
-          >
-        </li>
-        <li>
-          <a href="listeview.html?category=Audio/Photo/Video%20Equipment"
-            >Podcast</a
-          >
-        </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Tech & story Lab</title>
+</head>
 
-        <li>
-          <a href="listeview.html?category=Cables%20&%20Connectors">Kamera</a>
-        </li>
-        <li>
-          <a href="listeview.html?category=Audio/Photo/Video%20Equipment"
-            >Mikrofoner</a
-          >
-        </li>
-        <li>
-          <a href="listeview.html?category=Audio/Photo/Video%20Equipment"
-            >Studio</a
-          >
-        </li>
-        <li>
-          <a href="listeview.html?category=Audio/Photo/Video%20Equipment"
-            >Virtual Reality</a
-          >
-        </li>
-        <li>
-          <a href="listeview.html?category=Audio/Photo/Video%20Equipment">Ai</a>
-        </li>
-        <li>
-          <a href="listeview.html?category=Audio/Photo/Video%20Equipment"
-            >Omformer</a
-          >
-        </li>
-      </ul>
-    </main>
-  </body>
+<body>
+  <header>
+    <div class="default-header">
+
+      <div class="extra-navigation hidden-xs hidden-sm">
+        <div class="sitename">MitKEA - intranet for KEA-studerende</div>
+        <div class="skip-main"><a href="#maincontent">Spring til indhold</a></div>
+        <nav>
+          <ul class="mod-menu mod-list nav ">
+            <li class="nav-item item-236 parent"><a href="/find-din-uddannelse">Find din uddannelse</a></li>
+            <li class="nav-item item-776"><a href="https://kea.topdesk.net/tas/public/ssp/">Serviceportal</a></li>
+            <li class="nav-item item-535"><a href="https://kea-fronter.itslearning.com/">Itslearning</a></li>
+            <li class="nav-item item-176"><a href="https://www.bibliotek.kea.dk/da" target="_blank"
+                rel="noopener noreferrer">Bibliotek</a></li>
+            <li class="nav-item item-178"><a href="https://kea.dk/" class="base-color-2" target="_blank"
+                rel="noopener noreferrer">KEA.DK</a></li>
+          </ul>
+
+        </nav>
+      </div>
+
+      <div id="hamburger" class="hamburger hamburger--squeeze navbar-toggle" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </div>
+
+      <div class="brand">
+        <a href="/">
+          <img class="hidden-xs hidden-sm" src="/images/resources/logo-main-black-single.png"
+            alt="KEA - Københavns Erhvervsakademi - logo">
+          <img class="hidden-md hidden-lg" src="/images/resources/logo-small.png"
+            alt="KEA - Københavns Erhvervsakademi - logo">
+        </a>
+      </div>
+      <nav class="hidden-xs hidden-sm">
+        <ul class="mod-menu mod-list nav megamenu">
+          <li class="nav-item item-241"><a href="/studiehandbog">Studiehåndbog</a>
+            <ul class="mod-menu__sub list-unstyled">
+              <li>
+                <div class="container-fluid">
+                  <div class="row-flex">
+                    <div id="kea-text-2821" class="mod-kea-text col-xs-12">
+                      <div class="">
+                        <div class="row-flex">
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Studiehåndbog</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1852"><a href="/studiehandbog">Se alle opslag</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Mest læste opslag</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1854"><a href="/studiehandbog/ai-kunstig-intelligens">AI -
+                                    kunstig
+                                    intelligens</a></li>
+                                <li class="nav-item item-1853"><a
+                                    href="/studieliv-og-faciliteter/studieliv/fredagsbar">Fredagsbar</a></li>
+                                <li class="nav-item item-1855"><a href="/studiehandbog/kea-mail">KEA Mail</a></li>
+                                <li class="nav-item item-1856"><a href="/studiehandbog/sps">SPS (Specialpædagogisk
+                                    Støtte)</a>
+                                </li>
+                                <li class="nav-item item-1857"><a href="/studiehandbog/abningstider">Åbningstider</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Bliv klar til studiestart</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1861"><a href="/studiehandbog/kea-login">KEA Login</a></li>
+                                <li class="nav-item item-1862"><a href="/studiehandbog/kea-mail">KEA Mail</a></li>
+                                <li class="nav-item item-1863"><a
+                                    href="/studiehandbog/nulstilling-af-kodeord">Nulstilling af
+                                    kodeord</a></li>
+                                <li class="nav-item item-1858"><a href="/studiehandbog/service-desk">Service Desk</a>
+                                </li>
+                                <li class="nav-item item-1859"><a href="/studiehandbog/studiekort">Studiekort</a></li>
+                                <li class="nav-item item-1860"><a href="/studiehandbog/wifi">Wifi</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3 darker">
+                            <div id="kea-text-2789" class="mod-kea-text">
+                              <a style="font-weight: 300;" href="/studiestart">
+                                <div class="">
+                                  <figure class="">
+                                    <picture class="img-full">
+                                      <source type="image/webp"
+                                        srcset="/slir/w2280/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 2280w, /slir/w1920/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 1920w, /slir/w1500/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 1500w, /slir/w1280/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 1280w, /slir/w1140/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 1140w, /slir/w940/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 940w, /slir/w750/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 750w, /slir/w640/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 640w, /slir/w480/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 480w, /slir/w360/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 360w"
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)">
+                                      <img title="" class="img-full" style=""
+                                        src="/slir/w1024/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg"
+                                        srcset="/slir/w2280/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 2280w, /slir/w1920/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 1920w, /slir/w1500/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 1500w, /slir/w1280/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 1280w, /slir/w1140/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 1140w, /slir/w940/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 940w, /slir/w750/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 750w, /slir/w640/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 640w, /slir/w480/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 480w, /slir/w360/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 360w"
+                                        alt=""
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)"
+                                        loading="lazy">
+                                    </picture>
+                                  </figure>
+                                  <p class="btn btn-default btn-rounded btn-lg"
+                                    style="padding: 5px 15px; margin-top: 10px;">
+                                    Er du ny på KEA?<br>Bliv klar til studiestart</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item item-1269 parent"><a href="/vejledning-og-stotte">Vejledning og støtte</a>
+            <ul class="mod-menu__sub list-unstyled">
+              <li>
+                <div class="container-fluid">
+                  <div class="row-flex">
+                    <div id="kea-text-2810" class="mod-kea-text col-xs-12">
+                      <div class="">
+                        <div class="row-flex">
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Vejledning</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1663"><a
+                                    href="/studiehandbog/studie-og-karrierevejledning">Studie-
+                                    og Karrierevejledning</a></li>
+                                <li class="nav-item item-1664"><a href="/studiehandbog/sps">SPS (Specialpædagogisk
+                                    Støtte)</a>
+                                </li>
+                                <li class="nav-item item-1665"><a
+                                    href="/studiehandbog/studieadministration">Studieadministration</a></li>
+                                <li class="nav-item item-1666"><a href="/studiehandbog/su">SU-vejledning</a></li>
+                                <li class="nav-item item-1667"><a href="/studiehandbog/srg">Studenterrådgivningen
+                                    (SRG)</a>
+                                </li>
+                                <li class="nav-item item-1668"><a href="/praktik#kea-text-1095">Praktikvejledning</a>
+                                </li>
+                                <li class="nav-item item-1717"><a
+                                    href="/internationale-muligheder#kontakt">International
+                                    vejledning</a></li>
+                                <li class="nav-item item-1670"><a href="/find-din-uddannelse">Find vejledning for din
+                                    uddannelse</a></li>
+                                <li class="nav-item item-1669"><a href="/studiehandbog/service-desk">Service Desk</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Praktiske genveje</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1671"><a href="/studiehandbog/merit">Merit</a></li>
+                                <li class="nav-item item-1672"><a href="/studiehandbog/kraenkende-adfaerd">Krænkende
+                                    adfærd</a></li>
+                                <li class="nav-item item-1673"><a href="/studiehandbog/klager">Klager</a></li>
+                                <li class="nav-item item-1674"><a href="/studiehandbog/eksamen">Eksamen</a></li>
+                                <li class="nav-item item-1675"><a href="/studiehandbog/dispensation">Dispensation</a>
+                                </li>
+                                <li class="nav-item item-1676"><a href="/studiehandbog/ordblind">Ordblind</a></li>
+                                <li class="nav-item item-1677"><a href="/studiehandbog/sygdom">Sygdom</a></li>
+                                <li class="nav-item item-1678"><a href="/studiehandbog/orlov">Orlov</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Studietips og gode råd</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1679"><a
+                                    href="https://bibliotek.kea.dk/da/studieviden/planlaegning-samarbejde"
+                                    target="_blank" rel="noopener noreferrer">Planlægning af dit studie</a></li>
+                                <li class="nav-item item-1680"><a
+                                    href="https://bibliotek.kea.dk/da/studieviden/studielaesning" target="_blank"
+                                    rel="noopener noreferrer">Læs faglige tekster</a></li>
+                                <li class="nav-item item-1681"><a
+                                    href="https://bibliotek.kea.dk/da/studieviden/noteteknik" target="_blank"
+                                    rel="noopener noreferrer">Tag brugbare noter</a></li>
+                                <li class="nav-item item-1682"><a
+                                    href="https://bibliotek.kea.dk/da/studieviden/gruppearbejde" target="_blank"
+                                    rel="noopener noreferrer">Godt gruppearbejde</a></li>
+                                <li class="nav-item item-1683"><a
+                                    href="https://bibliotek.kea.dk/da/studieviden/opgaveskrivning" target="_blank"
+                                    rel="noopener noreferrer">Skriv opgaver på studiet</a></li>
+                                <li class="nav-item item-1684"><a
+                                    href="https://bibliotek.kea.dk/da/studieviden/presentation" target="_blank"
+                                    rel="noopener noreferrer">Præsentationsteknik</a></li>
+                                <li class="nav-item item-1685"><a href="https://bibliotek.kea.dk/da/studieviden/eksamen"
+                                    target="_blank" rel="noopener noreferrer">Bliv klar til eksamen</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3 darker">
+                            <div id="kea-text-2786" class="mod-kea-text">
+                              <a style="font-weight: 300;" href="/studiehandbog/sps">
+                                <div class="">
+                                  <figure class="">
+                                    <picture class="img-full">
+                                      <source type="image/webp"
+                                        srcset="/slir/w2280/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 2280w, /slir/w1920/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 1920w, /slir/w1500/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 1500w, /slir/w1280/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 1280w, /slir/w1140/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 1140w, /slir/w940/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 940w, /slir/w750/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 750w, /slir/w640/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 640w, /slir/w480/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 480w, /slir/w360/images/megamenu/vejledning-og-stotte-megamenu.jpg.webp 360w"
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)">
+                                      <img title="" class="img-full" style=""
+                                        src="/slir/w1024/images/megamenu/vejledning-og-stotte-megamenu.jpg"
+                                        srcset="/slir/w2280/images/megamenu/vejledning-og-stotte-megamenu.jpg 2280w, /slir/w1920/images/megamenu/vejledning-og-stotte-megamenu.jpg 1920w, /slir/w1500/images/megamenu/vejledning-og-stotte-megamenu.jpg 1500w, /slir/w1280/images/megamenu/vejledning-og-stotte-megamenu.jpg 1280w, /slir/w1140/images/megamenu/vejledning-og-stotte-megamenu.jpg 1140w, /slir/w940/images/megamenu/vejledning-og-stotte-megamenu.jpg 940w, /slir/w750/images/megamenu/vejledning-og-stotte-megamenu.jpg 750w, /slir/w640/images/megamenu/vejledning-og-stotte-megamenu.jpg 640w, /slir/w480/images/megamenu/vejledning-og-stotte-megamenu.jpg 480w, /slir/w360/images/megamenu/vejledning-og-stotte-megamenu.jpg 360w"
+                                        alt=""
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)"
+                                        loading="lazy">
+                                    </picture>
+                                  </figure>
+                                  <p class="btn btn-default btn-rounded btn-lg"
+                                    style="padding: 5px 15px; margin-top: 10px;">
+                                    Brug for ekstra støtte?<br>Se dine muligheder med SPS</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item item-511 parent"><a href="/praktik">Praktik</a>
+            <ul class="mod-menu__sub list-unstyled">
+              <li>
+                <div class="container-fluid">
+                  <div class="row-flex">
+                    <div id="kea-text-2811" class="mod-kea-text col-xs-12">
+                      <div class="">
+                        <div class="row-flex">
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Skal du snart i praktik?</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1870"><a href="/praktik">Få en intro til praktik</a></li>
+                              </ul>
+                            </div>
+                            <div class="moduletable ">
+                              <h3>Arbejdspladspraktik</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1686"><a
+                                    href="/praktik/arbejdspladspraktik">Arbejdspladspraktik</a>
+                                </li>
+                                <li class="nav-item item-1687"><a
+                                    href="/praktik/arbejdspladspraktik#kea-text-1109">Praktik i
+                                    Danmark</a></li>
+                                <li class="nav-item item-1688"><a
+                                    href="/praktik/arbejdspladspraktik#kea-text-1114">Praktik i
+                                    udlandet</a></li>
+                                <li class="nav-item item-1689"><a
+                                    href="/praktik/arbejdspladspraktik/praktik-optometri">Praktik for Optometri</a></li>
+                                <li class="nav-item item-1690"><a
+                                    href="/praktik/arbejdspladspraktik/find-virksomhed">Find
+                                    virksomhed</a></li>
+                                <li class="nav-item item-1691"><a
+                                    href="/praktik/arbejdspladspraktik/kontakt-virksomhed">Kontakt virksomhed</a></li>
+                                <li class="nav-item item-1692"><a
+                                    href="/praktik/arbejdspladspraktik/under-praktikken">Under
+                                    praktikken</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Iværksætterpraktik</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1693"><a
+                                    href="/praktik/ivaerksaetterpraktik">Iværksætterpraktik</a>
+                                </li>
+                                <li class="nav-item item-1694"><a
+                                    href="/praktik/ivaerksaetterpraktik/ansogning">Ansøgning til
+                                    iværksætterpraktik</a></li>
+                                <li class="nav-item item-1695"><a
+                                    href="/praktik/ivaerksaetterpraktik/krav-til-ivaerksaetterpraktik">Krav til
+                                    iværksætterpraktik</a></li>
+                                <li class="nav-item item-1696"><a href="/praktik/ivaerksaetterpraktik/mentor">Mentor</a>
+                                </li>
+                                <li class="nav-item item-1697"><a href="/praktik/ivaerksaetterpraktik/kea-ignite">KEA
+                                    Ignite</a></li>
+                                <li class="nav-item item-1698"><a
+                                    href="/praktik/ivaerksaetterpraktik/startup-hub">Startup
+                                    Hub</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Praktisk info</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1699"><a
+                                    href="/praktik/praktisk-info/praktikkontrakten">Praktikkontrakten</a></li>
+                                <li class="nav-item item-1700"><a
+                                    href="/praktik/praktisk-info/formalia-omkring-din-praktik">Formalia omkring din
+                                    praktik</a></li>
+                                <li class="nav-item item-1702"><a href="/praktik#kea-text-1095">Praktikkoordinatorer</a>
+                                </li>
+                                <li class="nav-item item-1701"><a href="/praktik/praktisk-info/arets-kea-praktik">Årets
+                                    KEA-praktik</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3 darker">
+                            <div id="kea-text-2788" class="mod-kea-text">
+                              <a style="font-weight: 300;" href="/studiehandbog/keas-praktik-og-jobportal">
+                                <div class="">
+                                  <figure class="">
+                                    <picture class="img-full">
+                                      <source type="image/webp"
+                                        srcset="/slir/w2280/images/megamenu/praktik-megamenu-jobportal.jpg.webp 2280w, /slir/w1920/images/megamenu/praktik-megamenu-jobportal.jpg.webp 1920w, /slir/w1500/images/megamenu/praktik-megamenu-jobportal.jpg.webp 1500w, /slir/w1280/images/megamenu/praktik-megamenu-jobportal.jpg.webp 1280w, /slir/w1140/images/megamenu/praktik-megamenu-jobportal.jpg.webp 1140w, /slir/w940/images/megamenu/praktik-megamenu-jobportal.jpg.webp 940w, /slir/w750/images/megamenu/praktik-megamenu-jobportal.jpg.webp 750w, /slir/w640/images/megamenu/praktik-megamenu-jobportal.jpg.webp 640w, /slir/w480/images/megamenu/praktik-megamenu-jobportal.jpg.webp 480w, /slir/w360/images/megamenu/praktik-megamenu-jobportal.jpg.webp 360w"
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)">
+                                      <img title="" class="img-full" style=""
+                                        src="/slir/w1024/images/megamenu/praktik-megamenu-jobportal.jpg"
+                                        srcset="/slir/w2280/images/megamenu/praktik-megamenu-jobportal.jpg 2280w, /slir/w1920/images/megamenu/praktik-megamenu-jobportal.jpg 1920w, /slir/w1500/images/megamenu/praktik-megamenu-jobportal.jpg 1500w, /slir/w1280/images/megamenu/praktik-megamenu-jobportal.jpg 1280w, /slir/w1140/images/megamenu/praktik-megamenu-jobportal.jpg 1140w, /slir/w940/images/megamenu/praktik-megamenu-jobportal.jpg 940w, /slir/w750/images/megamenu/praktik-megamenu-jobportal.jpg 750w, /slir/w640/images/megamenu/praktik-megamenu-jobportal.jpg 640w, /slir/w480/images/megamenu/praktik-megamenu-jobportal.jpg 480w, /slir/w360/images/megamenu/praktik-megamenu-jobportal.jpg 360w"
+                                        alt=""
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)"
+                                        loading="lazy">
+                                    </picture>
+                                  </figure>
+                                  <p class="btn btn-default btn-rounded btn-lg"
+                                    style="padding: 5px 15px; margin-top: 10px;">
+                                    Leder du efter praktiksted?<br>Kig forbi KEAs Praktik- og Jobportal</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item item-1293 parent"><a href="/internationale-muligheder">Internationale muligheder</a>
+            <ul class="mod-menu__sub list-unstyled">
+              <li>
+                <div class="container-fluid">
+                  <div class="row-flex">
+                    <div id="kea-text-2812" class="mod-kea-text col-xs-12">
+                      <div class="">
+                        <div class="row-flex">
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Udveksling</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1703"><a
+                                    href="/internationale-muligheder/udveksling/laes-et-semester-i-udlandet">Læs et
+                                    semester i
+                                    udlandet</a></li>
+                                <li class="nav-item item-1704"><a
+                                    href="/internationale-muligheder/udveksling/ansogningsproces">Ansøgningsproces</a>
+                                </li>
+                                <li class="nav-item item-1705"><a
+                                    href="/internationale-muligheder/udveksling/fonde-og-legater">Fonde og legater</a>
+                                </li>
+                                <li class="nav-item item-1706"><a
+                                    href="/internationale-muligheder/udveksling/praktisk-information">Praktisk
+                                    information</a>
+                                </li>
+                                <li class="nav-item item-1707"><a
+                                    href="/internationale-muligheder#kontakt">Internationale
+                                    koordinatorer</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Partneruniversiteter</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1708 deeper parent"><a
+                                    href="/internationale-muligheder/partneruniversiteter">Se alle vores
+                                    partneruniversiteter</a>
+                                  <ul class="mod-menu__sub list-unstyled small">
+                                    <li class="nav-item item-1931"><a
+                                        href="/se-alle-vores-partneruniversiteter/hogeschool-van-amsterdam">Hogeschool
+                                        van
+                                        Amsterdam</a></li>
+                                  </ul>
+                                </li>
+                                <li class="nav-item item-1709"><a
+                                    href="/internationale-muligheder/partneruniversiteter#">Partneruniversiteter i
+                                    Europa</a>
+                                </li>
+                                <li class="nav-item item-1710"><a
+                                    href="/internationale-muligheder/partneruniversiteter#">Partneruniversiteter i
+                                    Nordamerika</a></li>
+                                <li class="nav-item item-1711"><a
+                                    href="/internationale-muligheder/partneruniversiteter#">Partneruniversiteter i
+                                    Sydamerika</a></li>
+                                <li class="nav-item item-1712"><a
+                                    href="/internationale-muligheder/partneruniversiteter#">Partneruniversiteter i
+                                    Asien</a>
+                                </li>
+                                <li class="nav-item item-1713"><a
+                                    href="/internationale-muligheder/partneruniversiteter#">Partneruniversiteter i
+                                    Australien
+                                    og New Zealand</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Internationale aktiviteter</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1714"><a
+                                    href="/internationale-muligheder/aktiviteter/charrette">KEAs
+                                    charrette</a></li>
+                                <li class="nav-item item-1715"><a
+                                    href="/internationale-muligheder/aktiviteter/sommerskoler">Sommerskoler</a></li>
+                                <li class="nav-item item-1716"><a
+                                    href="/internationale-muligheder/aktiviteter/workshops">Workshops</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3 darker">
+                            <div id="kea-text-2787" class="mod-kea-text">
+                              <a style="font-weight: 300;" href="/internationale-muligheder/aktiviteter/charrette">
+                                <div class="">
+                                  <figure class="">
+                                    <picture class="img-full">
+                                      <source type="image/webp"
+                                        srcset="/slir/w2280/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 2280w, /slir/w1920/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 1920w, /slir/w1500/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 1500w, /slir/w1280/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 1280w, /slir/w1140/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 1140w, /slir/w940/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 940w, /slir/w750/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 750w, /slir/w640/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 640w, /slir/w480/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 480w, /slir/w360/images/megamenu/internationale-muligheder-megamenu-charrette.jpg.webp 360w"
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)">
+                                      <img title="" class="img-full" style=""
+                                        src="/slir/w1024/images/megamenu/internationale-muligheder-megamenu-charrette.jpg"
+                                        srcset="/slir/w2280/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 2280w, /slir/w1920/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 1920w, /slir/w1500/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 1500w, /slir/w1280/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 1280w, /slir/w1140/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 1140w, /slir/w940/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 940w, /slir/w750/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 750w, /slir/w640/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 640w, /slir/w480/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 480w, /slir/w360/images/megamenu/internationale-muligheder-megamenu-charrette.jpg 360w"
+                                        alt=""
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)"
+                                        loading="lazy">
+                                    </picture>
+                                  </figure>
+                                  <p class="btn btn-default btn-rounded btn-lg"
+                                    style="padding: 5px 15px; margin-top: 10px;">
+                                    Klar på at møde folk fra hele verden?<br>Bliv en del af årets KEA-charrette</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item item-1306 active parent"><a href="/studieliv-og-faciliteter">Studieliv og Faciliteter</a>
+            <ul class="mod-menu__sub list-unstyled">
+              <li>
+                <div class="container-fluid">
+                  <div class="row-flex">
+                    <div id="kea-text-2813" class="mod-kea-text col-xs-12">
+                      <div class="">
+                        <div class="row-flex">
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Studieliv</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1733"><a href="/studieliv-og-faciliteter/studieliv">Studielivet
+                                    på
+                                    KEA</a></li>
+                                <li class="nav-item item-1734"><a
+                                    href="/studieliv-og-faciliteter/studieliv/frivillige-foreninger">Frivillige
+                                    foreninger</a>
+                                </li>
+                                <li class="nav-item item-1735"><a
+                                    href="/studieliv-og-faciliteter/studieliv/bliv-frivillig">Bliv frivillig</a></li>
+                                <li class="nav-item item-1736"><a
+                                    href="/studieliv-og-faciliteter/studieliv/fredagsbar">Fredagsbar</a></li>
+                                <li class="nav-item item-1737"><a
+                                    href="/studieliv-og-faciliteter/studieliv/social-studiestart">Social studiestart</a>
+                                </li>
+                                <li class="nav-item item-1738"><a
+                                    href="/studieliv-og-faciliteter/studieliv/events">Studielivskalender</a></li>
+                                <li class="nav-item item-1739"><a
+                                    href="/studieliv-og-faciliteter/studieliv#kontakt">Kontakt
+                                    Studiemiljøkoordinatorerne</a></li>
+                              </ul>
+                            </div>
+                            <div class="moduletable ">
+                              <h3>Faciliteter</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1740"><a href="https://bibliotek.kea.dk/da/">Bibliotek</a></li>
+                                <li class="nav-item item-1741"><a
+                                    href="/studieliv-og-faciliteter/studieliv/fredagsbar">Fredagsbarer</a></li>
+                                <li class="nav-item item-1742"><a href="/studiehandbog/grupperum">Grupperum</a></li>
+                                <li class="nav-item item-1743"><a href="/studiehandbog/kantinen">Kantinen</a></li>
+                                <li class="nav-item item-1744"><a
+                                    href="/studieliv-og-faciliteter/labs/circular-labs/circular-lab#material-connexion">Material
+                                    Connexion</a></li>
+                                <li class="nav-item item-1745"><a
+                                    href="/praktik/ivaerksaetterpraktik/startup-hub">Startup
+                                    Hub</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Studenterpolitik</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1746"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik">Studenterpolitik på KEA</a></li>
+                                <li class="nav-item item-1747"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik/dsr">De
+                                    Studerendes Råd (DSR)</a></li>
+                                <li class="nav-item item-1748"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik/lokalrad">Lokalråd</a></li>
+                                <li class="nav-item item-1749"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik/smr">Studiemiljørepræsentant
+                                    (SMR)</a>
+                                </li>
+                                <li class="nav-item item-1750"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik/deso-studenterorganisation">DESO -
+                                    studenterorganisation</a></li>
+                                <li class="nav-item item-1751"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik/keas-bestyrelse">KEAs
+                                    bestyrelse</a></li>
+                                <li class="nav-item item-1752"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik/uddannelsesudvalg">Uddannelsesudvalg</a>
+                                </li>
+                                <li class="nav-item item-1753"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik/kantinebrugergruppe">Kantinebrugergruppe</a>
+                                </li>
+                                <li class="nav-item item-1754"><a
+                                    href="/studieliv-og-faciliteter/studenterpolitik/modereferater">Mødereferater</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="moduletable ">
+                              <h3>Labs på KEA</h3>
+                              <ul class="mod-menu mod-list nav ">
+                                <li class="nav-item item-1755 alias-parent-active"><a
+                                    href="/studieliv-og-faciliteter/labs">Alle labs</a></li>
+                                <li class="nav-item item-1756"><a href="/studieliv-og-faciliteter/labs/bim-cafe">BIM
+                                    Café</a>
+                                </li>
+                                <li class="nav-item item-1757 deeper parent"><a
+                                    href="/studieliv-og-faciliteter/labs/circular-labs">Circular Labs</a>
+                                  <ul class="mod-menu__sub list-unstyled small">
+                                    <li class="nav-item item-1758"><a
+                                        href="/studieliv-og-faciliteter/labs/circular-labs/circular-lab">Circular
+                                        Lab</a></li>
+                                    <li class="nav-item item-1759"><a
+                                        href="/studieliv-og-faciliteter/labs/circular-labs/circular-material-lab">Circular
+                                        Material Lab</a></li>
+                                  </ul>
+                                </li>
+                                <li class="nav-item item-1760"><a href="/studieliv-og-faciliteter/labs/code-lab">Code
+                                    Lab</a>
+                                </li>
+                                <li class="nav-item item-1761 deeper parent"><a
+                                    href="/studieliv-og-faciliteter/labs/energi-og-teknik-lab">Energi og Teknik Lab</a>
+                                  <ul class="mod-menu__sub list-unstyled small">
+                                    <li class="nav-item item-1762"><a
+                                        href="/studieliv-og-faciliteter/labs/energi-og-teknik-lab/maleudstyr">Måleudstyr</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="nav-item item-1763 deeper parent"><a
+                                    href="/studieliv-og-faciliteter/labs/fashion-lab">Fashion Labs</a>
+                                  <ul class="mod-menu__sub list-unstyled small">
+                                    <li class="nav-item item-1764"><a
+                                        href="/studieliv-og-faciliteter/labs/fashion-lab/fashion-lab">Fashion Lab</a>
+                                    </li>
+                                    <li class="nav-item item-1765"><a
+                                        href="/studieliv-og-faciliteter/labs/fashion-lab/fashion-tech-lab">Fashion Tech
+                                        Lab</a></li>
+                                    <li class="nav-item item-1766"><a
+                                        href="/studieliv-og-faciliteter/labs/fashion-lab/knit-lab">Knit Lab</a></li>
+                                  </ul>
+                                </li>
+                                <li class="nav-item item-1767"><a href="/studieliv-og-faciliteter/labs/itt-lab">ITT
+                                    Lab</a>
+                                </li>
+                                <li class="nav-item item-1768"><a href="/studieliv-og-faciliteter/labs/lab-16">LAB
+                                    16</a></li>
+                                <li class="nav-item item-1769"><a
+                                    href="/studieliv-og-faciliteter/labs/landmålerudstyr">Landmålerudstyr</a></li>
+                                <li class="nav-item item-1770"><a href="/studieliv-og-faciliteter/labs/maker-lab">Maker
+                                    Lab</a></li>
+                                <li class="nav-item item-1771"><a href="/studieliv-og-faciliteter/labs/smyk-lab">SMYK
+                                    Lab</a>
+                                </li>
+                                <li class="nav-item item-1772 current active"><a
+                                    href="/studieliv-og-faciliteter/labs/tech-story-lab">Tech &amp; Story Lab</a></li>
+                                <li class="nav-item item-1773"><a href="/studieliv-og-faciliteter/labs/xr-lab">XR
+                                    Lab</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-3 darker">
+                            <div id="kea-text-2789" class="mod-kea-text">
+                              <a style="font-weight: 300;" href="/studiestart">
+                                <div class="">
+                                  <figure class="">
+                                    <picture class="img-full">
+                                      <source type="image/webp"
+                                        srcset="/slir/w2280/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 2280w, /slir/w1920/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 1920w, /slir/w1500/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 1500w, /slir/w1280/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 1280w, /slir/w1140/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 1140w, /slir/w940/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 940w, /slir/w750/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 750w, /slir/w640/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 640w, /slir/w480/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 480w, /slir/w360/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg.webp 360w"
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)">
+                                      <img title="" class="img-full" style=""
+                                        src="/slir/w1024/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg"
+                                        srcset="/slir/w2280/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 2280w, /slir/w1920/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 1920w, /slir/w1500/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 1500w, /slir/w1280/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 1280w, /slir/w1140/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 1140w, /slir/w940/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 940w, /slir/w750/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 750w, /slir/w640/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 640w, /slir/w480/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 480w, /slir/w360/images/megamenu/studieliv-og-faciliteter-megamenu-studiestart.jpg 360w"
+                                        alt=""
+                                        sizes="(min-width: 1200px) 262.5px, (min-width: 992px) 212.5px, (min-width: 768px) 32.5px, calc((100vw - 360px) / 12)"
+                                        loading="lazy">
+                                    </picture>
+                                  </figure>
+                                  <p class="btn btn-default btn-rounded btn-lg"
+                                    style="padding: 5px 15px; margin-top: 10px;">
+                                    Er du ny på KEA?<br>Bliv klar til studiestart</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <img src="tech-story-lab-3-bred.jpg.webp" alt="">
+    <h1>Tech & Story Lab</h1>
+    <section class="info">
+      <div>
+        <h2>Åbningstider</h2>
+        <p>Mandag-torsdag 9-16</p>
+        <p>Fredag 9-15</p>
+      </div>
+      <div>
+        <h2>Husk Studiekort</h2>
+        <p>
+          Studiekortet skal være gyldigt og må kun benyttes af kortets ejer
+        </p>
+      </div>
+    </section>
+
+    <h2>Kategorier</h2>
+    <ul class="category-list">
+      <li><a href="listeview.html?category=Mobile%20Devices">Ledninger</a></li>
+      <li><a href="listeview.html?category=Audio/Photo/Video%20Equipment">Telefoner</a></li>
+      <li><a href="listeview.html?category=Audio/Photo/Video%20Equipment">Podcast</a></li>
+      <li><a href="listeview.html?category=Cables%20&%20Connectors">Kamera</a></li>
+      <li><a href="listeview.html?category=Audio/Photo/Video%20Equipment">Mikrofoner</a></li>
+      <li><a href="listeview.html?category=Audio/Photo/Video%20Equipment">Studio</a></li>
+      <li><a href="listeview.html?category=Audio/Photo/Video%20Equipment">Virtual Reality</a></li>
+      <li><a href="listeview.html?category=Audio/Photo/Video%20Equipment">AI</a></li>
+      <li><a href="listeview.html?category=Audio/Photo/Video%20Equipment">Omformer</a></li>
+    </ul>
+  </main>
+
+  <!-- dette er footeren fra KEA sin side -->
+  <section class="footer   pd-top-md pd-bottom-md">
+    <div class="container">
+      <div class="row-flex">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="moduletable ">
+            <h3>KEA - Københavns Erhvervsakademi</h3>
+            <div id="mod-custom115" class="mod-custom custom">
+              <p>Guldbergsgade 29N<br />2200 København N</p>
+              <h5>Du skal ikke bare vide.<br />Du skal kunne.</h5>
+            </div>
+          </div>
+          <div class="moduletable ">
+
+            <div id="mod-custom116" class="mod-custom custom">
+              <p><a title="Følg os på Facebook" href="https://www.facebook.com/KEAstudentlife/"><i
+                    class="fa fa-2x kea-icon-facebook"></i></a>&nbsp;&nbsp;<a title="Følg os på LinkedIn"
+                  href="https://www.linkedin.com/school/kea-k-benhavns-erhvervsakademi/"><i
+                    class="fa fa-2x kea-icon-linkedin"></i></a>&nbsp;&nbsp;<a title="Følg os på Instagram"
+                  href="https://www.instagram.com/keacph/"><i class="fa fa-2x kea-icon-instagram"></i></a>&nbsp;&nbsp;<a
+                  title="Følg os på Twitter" href="https://twitter.com/keacph/"><i
+                    class="fa fa-2x kea-icon-twitter"></i></a>&nbsp;&nbsp;<a
+                  href="https://www.youtube.com/user/KEAkanal"><i class="fa fa-2x kea-icon-youtube"></i></a><a
+                  title="Find vores podcasts på Podbean" href="http://keacph.podbean.com" target="_blank"
+                  rel="noopener"></a></p>
+              <p><a title="Find vores podcasts på Podbean" href="http://keacph.podbean.com" target="_blank"
+                  rel="noopener"><img style="width: 150px; height: 56px; border: none;"
+                    src="//www.podbean.com/images/badges/w600.png" alt="Download app'en til Podbean" /></a></p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="moduletable ">
+            <h3>Vejledning</h3>
+            <ul class="mod-menu mod-list nav ">
+              <li class="nav-item item-550"><a href="/studiehandbog/studieadministration">Studieadministrationen</a>
+              </li>
+              <li class="nav-item item-1653"><a href="/studiehandbog/studie-og-karrierevejledning">Studie-
+                  og
+                  Karrierevejledning</a></li>
+              <li class="nav-item item-538"><a href="/studiehandbog/sps">SPS (specialpædagogisk
+                  støtte)</a>
+              </li>
+              <li class="nav-item item-541"><a href="/studiehandbog/su">SU-vejledning</a></li>
+              <li class="nav-item item-551"><a href="/praktik">Praktik</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="moduletable ">
+            <h3>Relevante links</h3>
+            <ul class="mod-menu mod-list nav ">
+              <li class="nav-item item-1652"><a href="https://outlook.office.com/">KEA Webmail</a></li>
+              <li class="nav-item item-187"><a href="http://bibliotek.kea.dk/" target="_blank"
+                  rel="noopener noreferrer">KEA Bibliotek</a></li>
+              <li class="nav-item item-188"><a href="https://kea-fronter.itslearning.com/" target="_blank"
+                  rel="noopener noreferrer">Itslearning</a></li>
+              <li class="nav-item item-191"><a href="https://katalog.kea.dk/" target="_blank"
+                  rel="noopener noreferrer">Fag- og modulkatalog</a></li>
+              <li class="nav-item item-189"><a href="/studiehandbog/studieaktivitetsmodel">Studieaktivitetsmodel</a>
+              </li>
+              <li class="nav-item item-1118"><a href="/?Itemid=1105">PARIS-aftalen</a></li>
+              <li class="nav-item item-190"><a href="https://kea.dk/ordensregler" target="_blank"
+                  rel="noopener noreferrer">Ordensregler</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="moduletable ">
+            <h3>Praktisk info</h3>
+            <ul class="mod-menu mod-list nav ">
+              <li class="nav-item item-138"><a href="https://kea.dk/cookies-og-privatliv" target="_blank"
+                  rel="noopener noreferrer">Cookies og privatliv</a></li>
+              <li class="nav-item item-139"><a href="https://kea.dk/persondatapolitik" target="_blank"
+                  rel="noopener noreferrer">Persondatapolitik</a></li>
+              <li class="nav-item item-695"><a href="https://www.was.digst.dk/kea-dk">Tilgængelighedserklæring</a></li>
+              <li class="nav-item item-517"><a href="/studiehandbog/adresser">Find vej på KEA</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
 </html>
