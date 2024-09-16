@@ -1,7 +1,5 @@
 const params = new URLSearchParams(window.location.search);
-let selectedCategory = params.get("category");
-
-selectedCategory = "Mobile Devices";
+let selectedCategory = params.get("category"); // Fjern hardcoded værdi
 
 console.log("selectedCategory", selectedCategory);
 
