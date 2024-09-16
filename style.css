@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-bottom: 3rem;
+  padding-top: 0.2rem;
+}
+
+body {
+  background-color: #ffffff;
+}
+h2 {
+  color: rgb(240, 78, 152);
+}
+h3 {
+  color: rgb(234, 80, 69);
+}
+
+/*desktop versjon*/
+@media (min-width: 750px) {
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .box1 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .box2 {
+    grid-row: 1;
+  }
+}
+/*mobilversjon*/
+@media (max-width: 750px) {
+}
