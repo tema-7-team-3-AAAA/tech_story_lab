@@ -1,5 +1,13 @@
 const params = new URLSearchParams(window.location.search);
-let selectedCategory = params.get("category"); // Fjern hardcoded værdi
+let selectedCategory = params.get("category");
+
+if (!selectedCategory) {
+  selectedCategory = "Produkter"; // Hvis der ikke er en kategori, vis en generisk tekst
+}
+
+// Sæt kategoriens navn som overskrift
+const categoryTitle = document.querySelector("#categoryTitle");
+categoryTitle.textContent = `Kategori: ${selectedCategory}`;
 
 console.log("selectedCategory", selectedCategory);
 
