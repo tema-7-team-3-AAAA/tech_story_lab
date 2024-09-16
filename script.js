@@ -1,39 +1,56 @@
-// url https://bbrajrfgxxltyoiktvaf.supabase.co
+const params = new URLSearchParams(window.location.search);
+const selectedCategory = params.get("category");
 
-// api nøgle eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJicmFqcmZneHhsdHlvaWt0dmFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NTU4NjIsImV4cCI6MjA0MTUzMTg2Mn0.LPtDyElMP9iDorwkofjSW-JBN1Mk9SWx2EwcBK3nnfc
+// her henter jeg kategorierne
+if (selectedCategory)
+  // Lav en fetch-forespørgsel med filter baseret på kategori, encode URI gør så det virker
+  fetch(
+    `https://bbrajrfgxxltyoiktvaf.supabase.co/rest/v1/TSL?Taksonomi1=eq.${encodeURIComponent(
+      selectedCategory
+    )}`,
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJicmFqcmZneHhsdHlvaWt0dmFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NTU4NjIsImV4cCI6MjA0MTUzMTg2Mn0.LPtDyElMP9iDorwkofjSW-JBN1Mk9SWx2EwcBK3nnfc",
+      },
+    }
+  )
+    .then((res) => res.json())
+    .then(showProducts);
 
-fetch("https://bbrajrfgxxltyoiktvaf.supabase.co/rest/v1/TSL", {
-  method: "GET",
-  headers: {
-    apikey:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJicmFqcmZneHhsdHlvaWt0dmFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NTU4NjIsImV4cCI6MjA0MTUzMTg2Mn0.LPtDyElMP9iDorwkofjSW-JBN1Mk9SWx2EwcBK3nnfc",
-  },
-})
-  .then((res) => res.json())
-  .then(showData);
-
-function showData(items) {
-  console.log(items);
-  // items.forEach()
+function showProducts(products) {
+  console.log(products);
+  products.forEach(showProduct);
 }
 
-//function(){}
+function showProduct(product) {
+  console.log(product);
+  // fang template
+  const template = document.querySelector("#productTemplate");
+  // lav en kopi
+  const copy = template.content.cloneNode(true);
+  // ændre indhold
+  copy.querySelector(".brand").textContent = product.Mærke;
+  copy.querySelector(".model").textContent = product.Produktnavn;
+  copy.querySelector(".kategori").textContent = product.Taksonomi1;
 
-// funktion fra peter i undervisning ikke sikkert nødvendig men den er til billeder
-function showData(items) {
-  console.log(items);
-  items.forEach(showImage);
+  //appende
+  document.querySelector(".grid_1-1-1").appendChild(copy);
 }
 
-function showImage(item) {
-  console.log("data item", item);
-
-  const template = document.querySelector("template").content;
-  const clone = template.cloneNode(true);
-
-  const image = clone.querySelector("img");
-  image.alt = "image of" + item.name;
-  image.src = `img/${item.img}`;
-
-  document.querySelector("body").appendChild(image);
-}
+// "Asset ID": "C00332"
+// ​
+// "Mærke": "GoPro"
+// ​
+// Objektkode: 9154
+// ​
+// "Produktnavn og model": "GoPro Chesty"
+// ​
+// "Taksonomi 1": "Audio/Photo/Video Equipment"
+// ​
+// "Taksonomi 2": "Camera Mounts"
+// ​
+// "Taksonomi 3": ""
+// ​
+// Type: " Camera Mounts"
