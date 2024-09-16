@@ -1,5 +1,9 @@
 const params = new URLSearchParams(window.location.search);
-const selectedCategory = params.get("category");
+let selectedCategory = params.get("category");
+
+selectedCategory = "Mobile Devices";
+
+console.log("selectedCategory", selectedCategory);
 
 // her henter jeg kategorierne
 if (selectedCategory)
@@ -36,7 +40,7 @@ function showProduct(product) {
   copy.querySelector(".kategori").textContent = product.Taksonomi1;
 
   //appende
-  document.querySelector(".grid_1-1-1").appendChild(copy);
+  document.querySelector(".grid_1_1_1").appendChild(copy);
 }
 
 // "Asset ID": "C00332"
