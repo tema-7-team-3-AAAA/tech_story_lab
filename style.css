@@ -4,7 +4,7 @@
 img {
   width: 100%;
   height: auto;
-  display: block;
+
   padding-bottom: 3rem;
   padding-top: 0.2rem;
 }
@@ -22,17 +22,6 @@ h3 {
 
 /*desktop versjon*/
 @media (min-width: 750px) {
-  .grid_1_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .box1 {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .box2 {
-    grid-row: 1;
-  }
 }
 /*mobilversjon*/
 @media (max-width: 750px) {
@@ -68,4 +57,99 @@ h3 {
   .category-list {
     grid-template-columns: 1fr;
   }
+}
+
+.info {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.info div {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: rgb(240, 78, 152);
+}
+
+.info h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+  }
+}
+.kontakt_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+.bilde1,
+.bilde2,
+.bilde3 {
+  width: 40%;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.kontakt_1 {
+  text-align: center;
+}
+.kontakt_2 {
+  text-align: center;
+}
+.kontakt_3 {
+  text-align: center;
+}
+
+.footer {
+  font-size: 0.9em;
+  background-color: #233249;
+  font-size: 0.9em;
+  color: #fff;
+}
+.footer .container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row-flex {
+  display: flex; /* Bruk Flexbox for å plassere kolonnene på rad */
+  flex-wrap: wrap; /* La kolonnene brytes ned til nye rader på små skjermer */
+  gap: 20px; /* Avstand mellom kolonnene */
+}
+
+.col-xs-12 {
+  flex: 1 1 100%; /* Full bredde på små skjermer */
+}
+
+.col-sm-6 {
+  flex: 1 1 calc(50% - 20px); /* To kolonner på mellomstore skjermer */
+}
+
+.col-md-3 {
+  flex: 1 1 calc(25% - 20px); /* Fire kolonner på store skjermer */
+}
+
+/* Justering for mindre skjermer */
+@media (max-width: 768px) {
+  .col-sm-6 {
+    flex: 1 1 100%; /* Full bredde på skjermer under 768px */
+  }
+}
+
+@media (max-width: 576px) {
+  .col-xs-12 {
+    flex: 1 1 100%; /* Full bredde på svært små skjermer */
+  }
+}
+
+.moduletable {
+  padding: 20px; /* Padding inni kolonnene */
+  border-radius: 5px; /* Avrundede hjørner for boksene */
 }
