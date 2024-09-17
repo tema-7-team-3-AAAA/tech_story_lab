@@ -30,6 +30,10 @@ h5 {
   font-size: 1rem;
   color: #233249;
 }
+h6 {
+  color: #ffffff;
+  font-size: 1rem;
+}
 .overskrift {
   /* text-align: center; */
   padding-left: 1rem;
@@ -55,28 +59,33 @@ h5 {
 .category-list li {
   background-color: rgb(255, 255, 255);
   text-align: center;
-  padding: 20px;
+  padding: 8px;
 }
 
 .category-list li a {
   text-decoration: none;
   color: #233249;
   font-weight: bold;
-  background-color: rgb(234, 80, 69);
   font-size: 1.5rem;
   color: #ffffff;
 }
 .category-list a:hover {
   color: #233249;
 }
-
-@media (max-width: 768px) {
+.kategori_h2 {
+  background-color: rgb(234, 80, 69);
+  font-size: 1.8rem;
+}
+.kategori_h2:hover {
+  color: #233249;
+}
+@media (max-width: 750px) {
   .category-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 750px) {
   .category-list {
     grid-template-columns: 1fr;
   }
@@ -101,25 +110,49 @@ h5 {
   margin-top: 0;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 750px) {
   .info {
     flex-direction: column;
+  } */
+/*mobilversjon*/
+@media (max-width: 750px) {
+  .kontakt_info {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .bilde1,
+  .bilde2,
+  .bilde3 {
+    width: 50%;
+    border-radius: 100%;
+    justify-content: center;
+  }
+
+  .kontakt_2 {
+    padding-top: 1rem;
+  }
+  .kontakt_3 {
+    padding-top: 1rem;
   }
 }
-.kontakt_info {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
-  margin-bottom: 1rem;
+/*desktop versjon*/
+@media (min-width: 750px) {
+  .kontakt_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .bilde1,
+  .bilde2,
+  .bilde3 {
+    width: 50%;
+    border-radius: 100%;
+    justify-content: center;
+  }
 }
-.bilde1,
-.bilde2,
-.bilde3 {
-  width: 50%;
-  border-radius: 100%;
-  justify-content: center;
-}
-
 .kontakt_1 {
   text-align: center;
 }
@@ -133,6 +166,15 @@ h5 {
 .kontakt_2 a,
 .kontakt_3 a {
   text-decoration: none;
+  color: #233249;
+}
+.kontakt_1 a:hover {
+  color: rgb(240, 78, 152);
+}
+.kontakt_2 a:hover {
+  color: rgb(240, 78, 152);
+}
+.kontakt_3 a:hover {
   color: rgb(240, 78, 152);
 }
 .footer {
@@ -150,38 +192,38 @@ h5 {
 }
 
 .row-flex {
-  display: flex; /* Bruk Flexbox for å plassere kolonnene på rad */
-  flex-wrap: wrap; /* La kolonnene brytes ned til nye rader på små skjermer */
-  gap: 20px; /* Avstand mellom kolonnene */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .col-xs-12 {
-  flex: 1 1 100%; /* Full bredde på små skjermer */
+  flex: 1 1 100%;
 }
 
 .col-sm-6 {
-  flex: 1 1 calc(50% - 20px); /* To kolonner på mellomstore skjermer */
+  flex: 1 1 calc(50% - 20px);
 }
 
 .col-md-3 {
-  flex: 1 1 calc(25% - 20px); /* Fire kolonner på store skjermer */
+  flex: 1 1 calc(25% - 20px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .col-sm-6 {
-    flex: 1 1 100%; /* Full bredde på skjermer under 768px */
+    flex: 1 1 100%;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 750px) {
   .col-xs-12 {
-    flex: 1 1 100%; /* Full bredde på svært små skjermer */
+    flex: 1 1 100%;
   }
 }
 
 .moduletable {
-  padding: 20px; /* Padding inni kolonnene */
-  border-radius: 5px; /* Avrundede hjørner for boksene */
+  padding: 20px;
+  border-radius: 5px;
 }
 .moduletable a {
   text-decoration: none;

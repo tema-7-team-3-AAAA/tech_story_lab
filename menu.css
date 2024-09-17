@@ -44,7 +44,7 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: rgb(234, 80, 69);
+  color: white;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
@@ -54,12 +54,12 @@ nav {
 }
 
 .menu a:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(234, 80, 69);
 }
 
 .dropdown-content a {
   padding: 10px;
-  color: rgb(234, 80, 69);
+  color: white;
   text-align: right;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -90,7 +90,7 @@ nav {
   .menu a {
     display: block;
     padding: 10px;
-    color: rgb(234, 80, 69);
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
     text-align: end;
@@ -144,3 +144,61 @@ nav {
   }
 }
 /********** MENU SLUTT **********/
+
+/********** Footer *********/
+.footer {
+  font-size: 0.9em;
+  background-color: #233249;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.footer .container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-xs-12 {
+  flex: 1 1 100%;
+}
+
+.col-sm-6 {
+  flex: 1 1 calc(50% - 20px);
+}
+
+.col-md-3 {
+  flex: 1 1 calc(25% - 20px);
+}
+
+@media (max-width: 750px) {
+  .col-sm-6 {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .col-xs-12 {
+    flex: 1 1 100%;
+  }
+}
+
+.moduletable {
+  padding: 20px;
+  border-radius: 5px;
+}
+.moduletable a {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+}
+.moduletable a:hover {
+  color: rgb(234, 80, 69);
+}
