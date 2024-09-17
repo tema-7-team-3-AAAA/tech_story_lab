@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  list-style-type: none;
 }
 img {
   width: 100%;
@@ -13,13 +14,21 @@ body {
   background-color: #ffffff;
 }
 p {
-  color: #233249;
+  color: #ffffff;
 }
 h2 {
-  color: #233249;
+  color: #ffffff;
 }
 h3 {
   color: rgb(234, 80, 69);
+}
+h4 {
+  font-size: 1.3rem;
+  color: rgb(234, 80, 69);
+}
+h5 {
+  font-size: 1rem;
+  color: #233249;
 }
 .overskrift {
   /* text-align: center; */
@@ -44,7 +53,7 @@ h3 {
 }
 
 .category-list li {
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px;
 }
@@ -53,9 +62,12 @@ h3 {
   text-decoration: none;
   color: #233249;
   font-weight: bold;
+  background-color: rgb(234, 80, 69);
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 .category-list a:hover {
-  color: rgb(240, 78, 152);
+  color: #233249;
 }
 
 @media (max-width: 768px) {
@@ -74,13 +86,14 @@ h3 {
   display: flex;
   gap: 20px;
   justify-content: space-between;
+  margin: 5rem;
 }
 
 .info div {
   flex: 1;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 5px;
+  background-color: #233249;
+  /* border-radius: 5px; */
   border: rgb(240, 78, 152);
 }
 
@@ -97,11 +110,12 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 .bilde1,
 .bilde2,
 .bilde3 {
-  width: 70%;
+  width: 50%;
   border-radius: 100%;
   justify-content: center;
 }
@@ -115,7 +129,12 @@ h3 {
 .kontakt_3 {
   text-align: center;
 }
-
+.kontakt_1 a,
+.kontakt_2 a,
+.kontakt_3 a {
+  text-decoration: none;
+  color: rgb(240, 78, 152);
+}
 .footer {
   font-size: 0.9em;
   background-color: #233249;
@@ -163,4 +182,9 @@ h3 {
 .moduletable {
   padding: 20px; /* Padding inni kolonnene */
   border-radius: 5px; /* Avrundede hjørner for boksene */
+}
+.moduletable a {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
 }
