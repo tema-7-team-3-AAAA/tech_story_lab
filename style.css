@@ -111,6 +111,7 @@ h3 {
   font-size: 0.9em;
   color: #fff;
 }
+
 .footer .container {
   margin-right: auto;
   margin-left: auto;
@@ -136,7 +137,6 @@ h3 {
   flex: 1 1 calc(25% - 20px); /* Fire kolonner på store skjermer */
 }
 
-/* Justering for mindre skjermer */
 @media (max-width: 768px) {
   .col-sm-6 {
     flex: 1 1 100%; /* Full bredde på skjermer under 768px */
