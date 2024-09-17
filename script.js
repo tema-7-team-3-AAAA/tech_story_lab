@@ -1,7 +1,13 @@
 const params = new URLSearchParams(window.location.search);
 let selectedCategory = params.get("category");
 
-selectedCategory = "Mobile Devices";
+if (!selectedCategory) {
+  selectedCategory = "Produkter"; // Hvis der ikke er en kategori, vis en generisk tekst
+}
+
+// Sæt kategoriens navn som overskrift
+const categoryTitle = document.querySelector("#categoryTitle");
+categoryTitle.textContent = `Kategori: ${selectedCategory}`;
 
 console.log("selectedCategory", selectedCategory);
 
