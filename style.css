@@ -34,6 +34,10 @@ h6 {
   color: #ffffff;
   font-size: 1rem;
 }
+.tekst {
+  margin: 2rem;
+  font-size: 1.2rem;
+}
 .overskrift {
   /* text-align: center; */
   padding-left: 1rem;
