@@ -7,8 +7,9 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    background-color: #F4EEEE;
+    /* background-color: #F4EEEE; */
    }
 img {
     width: 100%;
@@ -18,9 +19,18 @@ img {
 }
 .product_info{
     margin: 20px;
+    color: #233249;
+
 }
 h1{
     margin-left: 110px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #233249;
+}
+.c1{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    color: #233249;
 }
 .box {
     width: 100%;
@@ -45,6 +55,10 @@ h1{
 
  .grid_1_1 img{
 border-radius: 200px;
+ }
+ 
+ footer{
+    margin-top: 4rem;
  }
 
 /* main */
@@ -87,7 +101,7 @@ border-radius: 200px;
         grid-template-columns: 1fr 1fr;
         margin-left: 8%;
         margin-right: 8%;
-
+        color: black;
         }
 
     .grid_1_1_1_1{

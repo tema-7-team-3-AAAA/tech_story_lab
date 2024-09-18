@@ -6,15 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="signal_view.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css">
     <title>signal view</title>
 </head>
 
 <body>
     <header>
-        <img src="img/tech-story-lab_head.webp" alt="Dame som tager billede med mobil" />
+        <div class="logo">
+            <a href="index.html">
+                <img src="kea.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="kategori2.html">Kategorier</a></li>
+                <li><a href="signal_view.html">Signal view</a></li>
+
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
     </header>
     <main>
-        <h1>Ledninger</h1>
+        <img src="img/tech-story-lab_head.webp" alt="Dame som tager billede med mobil" />
         <h1 id="categoryTitle">Kategori:</h1>
 
         <section class="grid_1_1_1">
@@ -25,14 +42,14 @@
                     <!-- <a class="box" href="produkt.html">book udstyret</a> -->
                 </div>
                 <div class="product_info">
-                    <h2>Produkt Information</h2>
-                    <p>
+                    <h2 class="c1">Produkt Information</h2>
+                    <p class="c1">
                         I Tech & Story Lab finder du et udvalg af kabler, der giver dig
                         mulighed for enten at forbinde udstyr, der har samme type stik,
                         eller forskellige stik, fx USB-A, USB-C, USB-Mini, USB-Micro og
                         Apple Lightning-stikket.
                     </p>
-                    <dl>
+                    <dl class="c1">
                         <dt>Kategori</dt>
                         <dd class="kategori">Kategori</dd>
                         <dt>Mærke</dt>
@@ -44,29 +61,28 @@
             </template>
         </section>
 
-<<<<<<< HEAD
-        <h2>Kontakt</h2>
+
         <div class="kontakt_info">
             <div class="kontakt_1">
                 <img class="bilde1" src="img/FRFR.jpg" alt="Frederick" />
                 <h4>Frederick Lehmann Rosling</h4>
-                <p>T: 46 46 04 42</p>
+                <h5>T: 46 46 04 42</h5>
                 <a href="makerlab@kea.dk">makerlab@kea.dk</a>
             </div>
             <div class="kontakt_2">
                 <img class="bilde2" src="img/Luca-fusco.jpeg" alt="Luca-fusco" />
                 <h4>Luca Fusco</h4>
-                <p>Værkstedsansvarlig</p>
+                <h5>Værkstedsansvarlig</h5>
                 <a href="makerlab@kea.dk">makerlab@kea.dk</a>
             </div>
             <div class="kontakt_3">
                 <img class="bilde3" src="img/simon-benjamin-christensen.jpg" alt="simon-benjamin-christensen" />
                 <h4>Simon Benjamin Christensen</h4>
-                <p>Værkstedsansvarlig</p>
+                <h5>Værkstedsansvarlig</h5>
                 <a href="makerlab@kea.dk">makerlab@kea.dk</a>
             </div>
-=======
-      <h1>kontakt</h1>
+
+            <!-- <h1>kontakt</h1>
       <div class="grid_1_1">
         <div>
           <img src="img/FRFR.jpg" alt="dummy-image" />
@@ -90,11 +106,11 @@
           <p>
             T: 46 46 04 42 <br />
             E: techandstorylab@kea.dk
-          </p>
->>>>>>> 96707b6469e42501d8ac482d65a66162a1536c40
+          </p> -->
         </div>
     </main>
     <footer>
+
         <!-- dette er footeren fra KEA sin side -->
         <section class="footer pd-top-md pd-bottom-md">
             <div class="container">
@@ -104,7 +120,7 @@
                             <h3>KEA - Københavns Erhvervsakademi</h3>
                             <div id="mod-custom115" class="mod-custom custom">
                                 <p>Guldbergsgade 29N<br />2200 København N</p>
-                                <h5>Du skal ikke bare vide.<br />Du skal kunne.</h5>
+                                <h6>Du skal ikke bare vide.<br />Du skal kunne.</h6>
                             </div>
                         </div>
                         <div class="moduletable">
@@ -126,8 +142,7 @@
                                 </p>
                                 <p>
                                     <a title="Find vores podcasts på Podbean" href="http://keacph.podbean.com"
-                                        target="_blank" rel="noopener"><img
-                                            style="width: 150px; height: 56px; border: none"
+                                        target="_blank" rel="noopener"><img style="width: 150px;  border: none"
                                             src="//www.podbean.com/images/badges/w600.png"
                                             alt="Download app'en til Podbean" /></a>
                                 </p>
@@ -195,7 +210,8 @@
                             <ul class="mod-menu mod-list nav">
                                 <li class="nav-item item-138">
                                     <a href="https://kea.dk/cookies-og-privatliv" target="_blank"
-                                        rel="noopener noreferrer">Cookies og privatliv</a>
+                                        rel="noopener noreferrer">Cookies og
+                                        privatliv</a>
                                 </li>
                                 <li class="nav-item item-139">
                                     <a href="https://kea.dk/persondatapolitik" target="_blank"
@@ -212,10 +228,12 @@
                     </div>
                 </div>
             </div>
+
         </section>
     </footer>
 
     <script src="script.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>
