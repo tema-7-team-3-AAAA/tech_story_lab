@@ -1,8 +1,10 @@
+// Her hentes kategori fra URL'en
 const params = new URLSearchParams(window.location.search);
 let selectedCategory = params.get("category");
 
+// Hvis der ikke er en kategori skirves der produkter
 if (!selectedCategory) {
-  selectedCategory = "Produkter"; // Hvis der ikke er en kategori, vis en generisk tekst
+  selectedCategory = "Produkter";
 }
 
 // Sæt kategoriens navn som overskrift
@@ -11,7 +13,7 @@ categoryTitle.textContent = `Kategori: ${selectedCategory}`;
 
 console.log("selectedCategory", selectedCategory);
 
-// her henter jeg kategorierne
+// If sætningen her henter den valgte kategori
 if (selectedCategory)
   // Lav en fetch-forespørgsel med filter baseret på kategori, encode URI gør så det virker
   fetch(
