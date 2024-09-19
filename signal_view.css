@@ -61,6 +61,61 @@ border-radius: 200px;
     margin-top: 4rem;
  }
 
+
+/* Generelle styling */
+form {
+    width: 30%;
+    margin: 20px auto;
+    /* Centrerer formularen horisontalt */
+    padding: 10px;
+    background-color: #EA5045;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* Input felt styling */
+input[type="text"] {
+    width: calc(100% - 20px);
+    /* Matcher formularens bredde med korrekt padding */
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    /* Forhindrer overflydning */
+}
+
+/* Knap styling */
+button {
+    width: 70%;
+    /* Gør knappen 70% så bred som formularen */
+    padding: 10px;
+    background-color: #233249;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    /* Sørger for, at knappen fylder en linje */
+    margin: 0 auto;
+    /* Centrerer knappen */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
 /* main */
 
 /* ------------------------- */
